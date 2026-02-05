@@ -9,7 +9,9 @@ console.table(values);
 
 const values2 = [5, 11, 394, 2, 576];
 function pureSplice(array, start, deleteCount) {
-    return array.toSpliced(start, deleteCount);
+    let newArray = array.slice();
+    newArray.splice(start, deleteCount);
+    return newArray;
 }
 console.table(values2);
 let newArray = pureSplice(values2, 2, 1);
